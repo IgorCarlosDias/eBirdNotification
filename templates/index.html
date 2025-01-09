@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observações de Aves em São Paulo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Observações Recentes de Aves em São Paulo</h1>
+        
+        <!-- Formulário para inserir o token do eBird -->
+        <div>
+            <label for="ebird-token">Insira seu token do eBird:</label> <br>
+            <label for=""><a href="https://ebird.org/api/keygen" target="_blank">Clique aqui</a> para gerar seu token</label><br>
+            <input type="text" id="ebird-token" placeholder="Token do eBird">
+            <button id="salvar-token">Salvar Token</button>
+        </div>
+        
+        <!-- Lista de aves -->
+        <div id="aves-list" class="aves-list">
+            <!-- Aves serão carregadas aqui -->
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
